@@ -99,7 +99,7 @@ public class CapabilityGasEffect implements ICapabilitySerializable<NBTBase> {
                 while(iterator.hasNext()) {
                     IGas gas = iterator.next();
                     float concentration = gases.get(gas);
-                    gas.applyEffect(entity, handler, concentration, concentration == 1.0F);
+                    gas.applyEffect(entity, handler, concentration, concentration == 1.0F, true);
                     concentration *= (float) Math.pow(2.0D, 1.0D / InhalerConfig.halfLife);
                     this.gases.put(gas, concentration);
                     if(GaspunkInhaler.isDebugMode()) GaspunkInhaler.getLogger().info("gas effect: {} (remaining concentration: {})", gas.getRegistryName(), concentration);

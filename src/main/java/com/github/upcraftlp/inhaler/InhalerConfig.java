@@ -12,7 +12,7 @@ import static com.github.upcraftlp.inhaler.GaspunkInhaler.MODID;
  * @author UpcraftLP
  */
 @Config.LangKey("config.gp_inhaler.title")
-@Config(modid = MODID, name = "craftdevmods/GaspunkInhaler") //--> /config/craftdevmods/gp-inhaler.cfg
+@Config(modid = MODID, name = "craftdevmods/GaspunkInhaler") //--> /config/craftdevmods/GaspunkInhaler.cfg
 public class InhalerConfig {
 
     //config values here

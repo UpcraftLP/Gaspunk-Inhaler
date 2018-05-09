@@ -33,7 +33,7 @@ public class GaspunkInhaler {
     //Meta Information
     public static final String MODNAME = "Gaspunk Inhaler";
     public static final String MODID = "gp_inhaler";
-    public static final String DEPENDENCIES = "required-after:gaspunk@[1.4]";
+    public static final String DEPENDENCIES = "required-after:gaspunk@[1.4.1,)";
     public static final String UPDATE_JSON = "@UPDATE_JSON@";
 
     public static final String FINGERPRINT_KEY = "@FINGERPRINTKEY@";
