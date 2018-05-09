@@ -153,7 +153,8 @@ tasks.build.dependsOn signJar
 tasks.curseforge.dependsOn build
 
 def curseRelations = {
-    //optionalLibrary '' //add curseforge-slug here
+    requiredLibrary 'gaspunk'
+    optionalLibrary 'craftdev-core' //add curseforge-slug here
 }
 
 
@@ -168,8 +169,7 @@ curseforge {
             changelog = "${project.ext.changeLog}"
             releaseType = project.release_type
 
-            //TODO uncomment when adding curse relations
-            //relations curseRelations
+            relations curseRelations
 
             //no such jars for now
             //addArtifact javadocJar
