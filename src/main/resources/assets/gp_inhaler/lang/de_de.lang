@@ -1,0 +1,7 @@
+#PARSE_ESCAPES
+
+#Items
+item.gp_inhaler.inhaler.name=%s Inhalator
+
+#Config
+config.gp_inhaler.title=Gaspunk Inhalator
