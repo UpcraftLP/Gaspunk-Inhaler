@@ -24,7 +24,7 @@ public class ModItems {
 
         @SubscribeEvent
         public static void onRegisterItems(RegistryEvent.Register<Item> event) {
-            event.getRegistry().registerAll(new ItemInhaler(), new Item().setRegistryName("empty_inhaler").setRegistryName("gp_inhaler.empty_inhaler").setCreativeTab(GasPunk.CREATIVE_TAB));
+            event.getRegistry().registerAll(new ItemInhaler(), new Item().setRegistryName("empty_inhaler").setUnlocalizedName("gp_inhaler.empty_inhaler").setCreativeTab(GasPunk.CREATIVE_TAB));
         }
 
         @SideOnly(Side.CLIENT)
