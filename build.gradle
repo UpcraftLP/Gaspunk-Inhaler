@@ -93,9 +93,20 @@ minecraft {
     if(project.hasProperty('dev_password')) {
         clientRunArgs += "--password=${dev_password}"
     }
-    serverRunArgs += "nogui" //mc server GUIs suck :P
 
+    //skip the screen to confirm that you want to load a world with missing registry entries
+    serverJvmArgs += "-Dfml.doNotBackup=true"
+    clientJvmArgs += "-Dfml.doNotBackup=true"
+
+    // skip having to confirm on server
     serverJvmArgs += "-Dfml.queryResult=confirm"
+
+    // disable server gui
+    serverRunArgs += "nogui"
+
+    //skip jansi warnings in the log
+    serverJvmArgs += '-Dlog4j.skipJansi=true'
+    clientJvmArgs += '-Dlog4j.skipJansi=true'
 }
 
 sourceSets {
