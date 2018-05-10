@@ -1,0 +1,14 @@
+{
+    "result": {
+        "item": "gp_inhaler:inhaler"
+    },
+    "type": "gaspunk:gas_container",
+    "ingredients": [
+        {
+            "item": "gp_inhaler:empty_inhaler"
+        },
+        {
+            "item": "gaspunk:gas_tube"
+        }
+    ]
+}
