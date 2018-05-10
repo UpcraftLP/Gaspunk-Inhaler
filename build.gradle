@@ -146,6 +146,8 @@ dependencies {
     runtime "mezz.jei:jei_${project.mc_version}:${project.jei_version}"
 
     deobfCompile "gaspunk:gaspunk:${project.mc_version}:${project.gp_version}"
+    runtime "com.github.Pyrofab:Ladylib:${project.ll_version}" //required for gaspunk
+
     deobfCompile "craftdev-core:craftdev-core:${project.mc_version}:${project.core_version}"
 
 }
