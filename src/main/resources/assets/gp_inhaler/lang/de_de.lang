@@ -2,6 +2,7 @@
 
 #Items
 item.gp_inhaler.inhaler.name=%s Inhalator
+item.gp_inhaler.empty_inhaler.name=Leerer Inhalator
 
 #Config
 config.gp_inhaler.title=Gaspunk Inhalator

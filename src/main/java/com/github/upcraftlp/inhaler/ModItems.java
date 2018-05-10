@@ -1,5 +1,6 @@
 package com.github.upcraftlp.inhaler;
 
+import ladysnake.gaspunk.GasPunk;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -16,13 +17,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModItems {
 
     public static final Item INHALER = null;
+    public static final Item EMPTY_INHALER = null;
 
     @Mod.EventBusSubscriber(modid = GaspunkInhaler.MODID)
     public static class Handler {
 
         @SubscribeEvent
         public static void onRegisterItems(RegistryEvent.Register<Item> event) {
-            event.getRegistry().register(new ItemInhaler());
+            event.getRegistry().registerAll(new ItemInhaler(), new Item().setRegistryName("empty_inhaler").setRegistryName("gp_inhaler.empty_inhaler").setCreativeTab(GasPunk.CREATIVE_TAB));
         }
 
         @SideOnly(Side.CLIENT)

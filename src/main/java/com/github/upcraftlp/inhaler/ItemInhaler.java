@@ -18,6 +18,7 @@ public class ItemInhaler extends ItemGasTube {
         this.setRegistryName("inhaler");
         this.setUnlocalizedName(GaspunkInhaler.MODID + ".inhaler");
         this.setCreativeTab(GasPunk.CREATIVE_TAB);
+        this.setMaxStackSize(1);
     }
 
     @Override
@@ -27,7 +28,7 @@ public class ItemInhaler extends ItemGasTube {
             IGas gas = getContainedGas(stack);
             IEntityGasEffect gasEffect = playerIn.getCapability(CapabilityGasEffect.GAS_EFFECT_CAPABILITY, null);
             gasEffect.addGasEffect(gas);
-            if(!playerIn.isCreative()) stack.shrink(1);
+            if(!playerIn.isCreative()) stack = new ItemStack(ModItems.EMPTY_INHALER);
         }
         return new ActionResult<>(EnumActionResult.SUCCESS, stack);
     }
