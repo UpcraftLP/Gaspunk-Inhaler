@@ -1,0 +1,22 @@
+{
+    "type": "forge:ore_shaped",
+    "pattern": [
+        " G",
+        "IB"
+    ],
+    "key": {
+        "G": {
+            "item": "minecraft:glass_bottle"
+        },
+        "I": {
+            "type": "forge:ore_dict",
+            "ore": "ingotIron"
+        },
+        "B": {
+            "item": "minecraft:stone_button"
+        }
+    },
+    "result": {
+        "item": "gp_inhaler:empty_inhaler"
+    }
+}
