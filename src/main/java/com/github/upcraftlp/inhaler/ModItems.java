@@ -31,6 +31,7 @@ public class ModItems {
         @SubscribeEvent
         public static void onRegisterRender(ModelRegistryEvent event) {
             ModelLoader.setCustomModelResourceLocation(INHALER, 0, new ModelResourceLocation(INHALER.getRegistryName(), "inventory"));
+            ModelLoader.setCustomModelResourceLocation(EMPTY_INHALER, 0, new ModelResourceLocation(EMPTY_INHALER.getRegistryName(), "inventory"));
         }
     }
 }
