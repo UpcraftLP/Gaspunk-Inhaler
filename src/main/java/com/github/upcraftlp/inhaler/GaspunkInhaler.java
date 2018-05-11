@@ -4,14 +4,19 @@ import com.github.upcraftlp.inhaler.api.IEntityGasEffect;
 import com.github.upcraftlp.inhaler.capability.CapabilityGasEffect;
 import core.upcraftlp.craftdev.api.util.ModHelper;
 import core.upcraftlp.craftdev.api.util.UpdateChecker;
+import ladysnake.gaspunk.item.ItemGasTube;
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.awt.*;
 
 import static com.github.upcraftlp.inhaler.GaspunkInhaler.*;
 
@@ -69,6 +74,9 @@ public class GaspunkInhaler {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         InhalerHandler.init();
+        if(event.getSide() == Side.CLIENT) {
+            Minecraft.getMinecraft().getItemColors().registerItemColorHandler((stack, tintIndex) -> tintIndex == 0 ? ItemGasTube.getContainedGas(stack).getBottleColor() : Color.WHITE.getRGB(), ModItems.INHALER);
+        }
         if(debugMode) log.info("gaspunk inhaler has completed initialized!");
     }
 
