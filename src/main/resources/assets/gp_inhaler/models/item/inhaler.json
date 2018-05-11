@@ -1,6 +1,15 @@
 {
-    "parent": "minecraft:item/handheld",
+    "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "gp_inhaler:items/inhaler"
-    }
+        "layer0": "gp_inhaler:items/inhaler_gas_underlay",
+        "layer1": "gp_inhaler:items/inhaler_pinned"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "gaspunk:gas_type": 1
+            },
+            "model": "gp_inhaler:item/inhaler_smoke"
+        }
+    ]
 }

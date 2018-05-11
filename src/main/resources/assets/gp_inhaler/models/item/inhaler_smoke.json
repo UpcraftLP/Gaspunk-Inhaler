@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gp_inhaler:items/inhaler_smoke_underlay",
+        "layer1": "gp_inhaler:items/inhaler_pinned"
+    }
+}

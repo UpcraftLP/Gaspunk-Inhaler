@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/handheld",
+    "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "gp_inhaler:items/empty_inhaler"
+        "layer0": "gp_inhaler:items/inhaler_unpinned"
     }
 }
