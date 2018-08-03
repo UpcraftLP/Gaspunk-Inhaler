@@ -1,10 +1,11 @@
 {
-  "homepage": "https://minecraft.curseforge.com/projects/gaspunk-inhaler",
-  "promos": {
-    "1.12.2-latest": "1.0.0",
-    "1.12.2-recommended": "1.0.0"
-  },
-  "1.12.2": {
-	"1.0.0": "* initial release"
-  }
+    "homepage": "https://minecraft.curseforge.com/projects/gaspunk-inhaler",
+    "promos": {
+        "1.12.2-latest": "1.0.1",
+        "1.12.2-recommended": "1.0.1"
+    },
+    "1.12.2": {
+        "1.0.1": "* added logo to Forge mod list\n* added maven artifact\n* added build timestamp",
+        "1.0.0": "* initial release"
+    }
 }
