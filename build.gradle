@@ -178,7 +178,7 @@ dependencies {
     //JEI (runtime only)
     runtime "mezz.jei:jei_${project.mc_version}:${project.jei_version}"
 
-    compile "com.github.Ladysnake:gaspunk:${project.gp_version}"
+    deobfCompile "com.github.Ladysnake:gaspunk:${project.gp_version}"
     //runtime "com.github.Ladysnake:Ladylib:${project.ll_version}" //required for gaspunk
 
     deobfCompile "craftdev-core:craftdev-core:${project.mc_version}:${project.core_version}"
