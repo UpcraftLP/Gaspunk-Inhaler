@@ -9,7 +9,7 @@
   "updateUrl": "${updateUrl}",
   "authorList": ["UpcraftLP"],
   "credits": "(C)2018-${year} UpcraftLP",
-  "logoFile": "",
+  "logoFile": "assets/gp_inhaler/logo.png",
   "screenshots": [],
   "dependencies": []
 }
