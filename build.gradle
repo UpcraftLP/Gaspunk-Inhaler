@@ -37,13 +37,13 @@ def change_log = ext.changeLog
 
 
 tasks.build.doLast {
-    println("Current version is ${modid}-${version}")
+    println("Current version is ${maven_artifact}-${version}")
     println("Changelog:")
     println(change_log)
 }
 
 group = project.maven_group // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = project.modid
+archivesBaseName = project.maven_artifact
 
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8 // Need this here so eclipse task generates correctly.
 compileJava {
