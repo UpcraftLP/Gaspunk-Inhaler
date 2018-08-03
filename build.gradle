@@ -122,12 +122,16 @@ sourceSets {
 }
 
 jar {
+    from "LICENSE"
     manifest.mainAttributes(
             "Implementation-Title": project.name,
             "Implementation-Version": "${project.mod_version}",
             "Built-On": "${project.mc_version}-${project.forge_version}",
-            "FMLAT": "${project.modid}_at.cfg"
+            "Timestamp": new Date().getTime(),
+            "Maven-Artifact":"${project.group}:${project.archivesBaseName}:${project.version}"
+            //"FMLAT": "${project.modid}_at.cfg"
     )
+    classifier '' //this is the main jar!
 }
 
 task signJar(type: SignJar, dependsOn: reobfJar) {
